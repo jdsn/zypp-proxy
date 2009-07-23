@@ -110,7 +110,7 @@ host = "download.opensuse.org"
 port = 80
 
 app = Rack::URLMap.new(
-                         '/repo/update' => ForwardAdapter.new('/repo/update', host, port),
+                         '/' => ForwardAdapter.new('/', host, port),
                          '/service/repo/repoindex.xml' => RepoIndexAdapter.new()
                         #'/test'  => SimpleAdapter.new,
                         #'/files' => Rack::File.new('.')
